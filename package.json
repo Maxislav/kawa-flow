@@ -36,6 +36,10 @@
     "webpack-dev-server": "4.0.0-beta.2"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.4",
+    "less": "^4.1.1",
+    "style-loader": "^2.0.0",
     "webpack-dev-middleware": "^4.1.0"
   }
 }
