@@ -1,0 +1,41 @@
+{
+  "name": "kawa-flow",
+  "version": "1.0.0",
+  "description": "kawa-flow",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --port 9000  --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lipatov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jasmine": "2.8.7",
+    "@types/node": "7.0.0",
+    "awesome-typescript-loader": "5.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "jasmine-core": "3.1.0",
+    "karma": "2.0.4",
+    "karma-jasmine": "1.1.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-webpack": "3.0.0",
+    "less-loader": "^8.1.1",
+    "source-map-loader": "0.2.3",
+    "tslint": "5.17.0",
+    "tslint-loader": "3.6.0",
+    "typescript": "3.5.1",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "4.0.0-beta.2"
+  },
+  "dependencies": {
+    "webpack-dev-middleware": "^4.1.0"
+  }
+}
