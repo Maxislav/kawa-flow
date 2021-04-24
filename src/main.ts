@@ -4,11 +4,13 @@ import { Greeter } from './greeter';
 
 const g = new Greeter('Juri');
 g.greet();
+const ww = document.querySelector('.container .ww>div:first-child');
 const dd = document.querySelector('.container .dd>div:first-child');
 const hh = document.querySelector('.container .hh>div:first-child');
 const mm = document.querySelector('.container .mm>div:first-child');
 const ss = document.querySelector('.container .ss>div:first-child');
 const ms = document.querySelector('.container .ms>div:first-child');
+const wwLine: HTMLElement = document.querySelector('.container .line-ww');
 const ddLine: HTMLElement = document.querySelector('.container .line-dd');
 const hhLine: HTMLElement = document.querySelector('.container .line-hh');
 const mmLine: HTMLElement = document.querySelector('.container .line-mm');
@@ -18,8 +20,12 @@ const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
 const dateEnd = new Date(2021, 6, 8).getTime();
 setInterval(() => {
-    const dif = (dateEnd - new Date().getTime());
+    const dif: number = (dateEnd - new Date().getTime());
     const timeLeft = secondsToDhms(dif);
+
+    ww.innerHTML = timeLeft.ww.toString();
+    wwLine.style.width = dif / (3600 * 24 * 7 * 1000) % 1 * 100 + '%';
+
     dd.innerHTML = timeLeft.dd.toString();
     hh.innerHTML = timeLeft.hh.toString();
 
@@ -38,8 +44,9 @@ setInterval(() => {
     msLine.style.opacity = (timeLeft.ms % 2 ? 0 : 1).toString();
 }, 50);
 
-function secondsToDhms(msrc: any) {
+function secondsToDhms(msrc: number) {
     msrc = Number(msrc);
+    const ww = Math.floor(msrc / 1000 / (3600 * 24 * 7));
     const dd = Math.floor(msrc / 1000 / (3600 * 24));
     const hh = Math.floor(msrc / 1000 % (3600 * 24) / 3600);
     const mm = Math.floor(msrc / 1000 % 3600 / 60);
@@ -47,6 +54,7 @@ function secondsToDhms(msrc: any) {
     const ms = Math.floor(msrc % 1000);
 
     return {
+        ww,
         dd,
         hh,
         mm,
