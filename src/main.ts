@@ -19,7 +19,8 @@ const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
 
 const dateEnd = new Date(2021, 6, 8).getTime();
-setInterval(() => {
+
+const calc = () => {
     const dif: number = (dateEnd - new Date().getTime());
     const timeLeft = secondsToDhms(dif);
 
@@ -42,7 +43,13 @@ setInterval(() => {
     ssLine.style.width = (timeLeft.ms * 100 / 1000).toFixed(1) + '%';
 
     msLine.style.opacity = (timeLeft.ms % 2 ? 0 : 1).toString();
-}, 50);
+};
+
+const recursion = () => {
+    calc();
+    window.requestAnimationFrame(recursion);
+};
+recursion();
 
 function secondsToDhms(msrc: number) {
     msrc = Number(msrc);
