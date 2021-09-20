@@ -18,7 +18,7 @@ const ssLine: HTMLElement = document.querySelector('.container .line-ss');
 const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
 
-const dateEnd = new Date(2021, 6, 8).getTime();
+const dateEnd = new Date(2021, 10, 15).getTime();
 
 const calc = () => {
     const dif: number = (dateEnd - new Date().getTime());
