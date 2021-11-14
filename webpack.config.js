@@ -2,7 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ROOT = path.resolve( __dirname, 'src' );
-const DESTINATION = path.resolve( __dirname, 'dist' );
+// const DESTINATION = path.resolve( __dirname, 'dist' );
+const DESTINATION = path.resolve( __dirname, 'glide' );
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -29,7 +30,10 @@ module.exports = {
                 { from: path.resolve(__dirname, './src/assets'), to: 'assets' }
             ]
         }),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
+            template: path.resolve( __dirname, 'src/index.html' ),
+        })*/
+         new HtmlWebpackPlugin({
             template: path.resolve( __dirname, 'src/index.html' ),
         }),
 
