@@ -18,7 +18,7 @@ const ssLine: HTMLElement = document.querySelector('.container .line-ss');
 const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
 
-const dateEnd = new Date(2022, 1, 1).getTime();
+const dateEnd = new Date(2022, 2, 1).getTime();
 
 
 const calc = () => {
