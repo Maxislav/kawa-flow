@@ -1,4 +1,5 @@
 import './style/main.less';
+import './random-background';
 
 import { Greeter } from './greeter';
 
@@ -17,9 +18,7 @@ const mmLine: HTMLElement = document.querySelector('.container .line-mm');
 const ssLine: HTMLElement = document.querySelector('.container .line-ss');
 const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
-
-const dateEnd = new Date(2022, 3, 2).getTime();
-
+const dateEnd = new Date('2022-03-01T00:00:00').getTime();
 
 const calc = () => {
     const dif: number = (dateEnd - new Date().getTime());

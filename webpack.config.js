@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ROOT = path.resolve( __dirname, 'src' );
 // const DESTINATION = path.resolve( __dirname, 'dist' );
-const DESTINATION = path.resolve( __dirname, 'glide' );
-//const DESTINATION = path.resolve( __dirname, 'bike' );
+// const DESTINATION = path.resolve( __dirname, 'glide' );
+const DESTINATION = path.resolve( __dirname, 'bike' );
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
