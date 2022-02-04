@@ -22,6 +22,6 @@ setInterval(() => {
         setTimeout(() => {
             el2.style.opacity = '0';
         }, 2000);
-    }, 1000);
+    }, 1500);
 
 }, 10000);
