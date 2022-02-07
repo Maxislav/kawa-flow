@@ -12,7 +12,7 @@ setInterval(() => {
 
     do {
         ni = getRandomInt(1, 7);
-    }while (i === ni)
+    } while (i === ni);
     i = ni;
     //  const i = getRandomInt(1, 7);
     el2.src = `assets/img/fade-in-out/${i}.jpg`;
