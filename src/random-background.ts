@@ -15,7 +15,7 @@ setInterval(() => {
     } while (i === ni);
     i = ni;
     //  const i = getRandomInt(1, 7);
-    el2.src = `assets/img/fade-in-out/${i}.jpg`;
+    el2.src = `assets/img/war/${i}.jpg`;
     el2.style.opacity = '1';
 
     el1.style.opacity = '0';

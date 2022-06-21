@@ -18,10 +18,10 @@ const mmLine: HTMLElement = document.querySelector('.container .line-mm');
 const ssLine: HTMLElement = document.querySelector('.container .line-ss');
 const msLine: HTMLElement = document.querySelector('.container .line-ms');
 
-const dateEnd = new Date('2022-03-01T00:00:00').getTime();
+const startTime = new Date('2022-02-24T05:00:00').getTime();
 
 const calc = () => {
-    const dif: number = (dateEnd - new Date().getTime());
+    const dif: number = (new Date().getTime() - startTime);
     const timeLeft = secondsToDhms(dif);
 
     ww.innerHTML = timeLeft.ww.toString();
