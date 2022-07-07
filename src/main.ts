@@ -5,6 +5,9 @@ import { Greeter } from './greeter';
 
 const g = new Greeter('Juri');
 g.greet();
+
+const dayNow = document.querySelector('.day-now>span:nth-child(1)');
+
 const ww = document.querySelector('.container .ww>div:first-child');
 const dd = document.querySelector('.container .dd>div:first-child');
 const hh = document.querySelector('.container .hh>div:first-child');
@@ -26,7 +29,7 @@ const calc = () => {
 
     ww.innerHTML = timeLeft.ww.toString();
     wwLine.style.width = dif / (3600 * 24 * 7 * 1000) % 1 * 100 + '%';
-
+    dayNow.innerHTML = (timeLeft.dd + 1).toString();
     dd.innerHTML = timeLeft.dd.toString();
     hh.innerHTML = timeLeft.hh.toString();
 
