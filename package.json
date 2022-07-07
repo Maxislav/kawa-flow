@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --port 9000  --mode development",
-    "build": "webpack --mode production",
+    "build-prod": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lipatov",

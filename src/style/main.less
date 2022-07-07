@@ -32,7 +32,17 @@ body{
   z-index: 2;
   transition: opacity 1s linear;
 }
+.day-now{
+  color: red;
+  text-shadow: 1px 3px 10px #f5b0fd, 1px -3px 10px #f5b0fd;
+  animation: myOrbit 1s linear infinite; ;
+}
 
+@keyframes myOrbit {
+  from { text-shadow: 1px 3px 10px #f5b0fd, 1px -3px 10px #f5b0fd; }
+  50%   { text-shadow: 1px 3px 10px rgba(255, 73, 133, 0); }
+  to   { text-shadow: 1px 3px 10px #ff4985; }
+}
 
 .container {
   position: absolute;
